@@ -11,8 +11,11 @@
 
   <body>
     <div id="app">
-      <h1 :title="title">{{message}}</h1>
-      <img :src="url" :alt="title" :title="title" />
+      <h1>{{message}}</h1>
+      <ul>
+        <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
+        <li style="list-style-type:none;" v-for="count in count">item #{{count}}</li>
+      </ul>
     </div>
   </body>
 
@@ -23,8 +26,12 @@
       el: '#app',
       data: {
         message: 'Hello, Vue World!',
-        title: 'you loaded this page on ' + new Date(),
-        url: "https://vuejs.org/images/logo.png"
+        todos: [
+          {text: 'Learn Vue', id: 1},
+          {text: 'like video', id: 2},
+          {text: 'subscribe to devmarketer', id: 3}
+        ],
+        count: 10
       }
     })
   </script>
