@@ -12,10 +12,7 @@
   <body>
     <div id="app">
       <h1>{{message}}</h1>
-      <ul>
-        <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
-        <li style="list-style-type:none;" v-for="count in count">item #{{count}}</li>
-      </ul>
+      <input type="text" v-model="message" />
     </div>
   </body>
 
@@ -25,13 +22,7 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello, Vue World!',
-        todos: [
-          {text: 'Learn Vue', id: 1},
-          {text: 'like video', id: 2},
-          {text: 'subscribe to devmarketer', id: 3}
-        ],
-        count: 10
+        message: 'Hello, Vue World!'
       }
     })
   </script>
